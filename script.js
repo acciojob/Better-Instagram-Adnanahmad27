@@ -10,7 +10,6 @@ let draggedId;
 
 function dragStart(event) {
     draggedId = event.target.id;
-    // event.dataTransfer.setData('text/plain', draggedId);
 }
 
 function dragOver(event) {
@@ -22,8 +21,6 @@ function drop(event) {
     const droppedId = event.target.id;
     const draggedElement = document.getElementById(draggedId);
     const droppedElement = document.getElementById(droppedId);
-    
-    // Swap the contents of the divs
     const tempHTML = draggedElement.innerHTML;
     draggedElement.innerHTML = droppedElement.innerHTML;
 	draggedElement.id = droppedId;
